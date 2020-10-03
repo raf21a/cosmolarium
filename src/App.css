@@ -1,0 +1,509 @@
+html{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background:black;
+  background-image: radial-gradient(#07080c 35%, #000000 65%);
+}
+
+.esferas{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -250px 0 0 -250px;
+
+  
+  border-radius: 100%;
+}
+/* ################################################### */
+/* ESFERAS PLANETARIAS */
+/* ################################################### */
+/* Posição dos planetas nas esferas */
+/* ################################################### */
+.esferasPlanetarias{
+  width: 84%;
+  height: 84%;
+  position: absolute;
+  left: 8%;
+  top: 8%;  
+  /* border: 1px solid rgba(255,255,255,0.1); */
+  border-radius: 100%;
+  z-index: 16000;
+}
+.esferaPlanetaria{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;  
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100%;
+}
+.esferaLunar{
+  transform: rotate(330deg);
+}
+.esferaMercurial{
+  transform: rotate(144deg);
+}
+.esferaVenuziana{
+  transform: rotate(210deg);
+}
+.esferaSolar{
+  transform: rotate(170deg);
+}
+.esferaMarcial{
+  transform: rotate(336deg);
+}
+.esferaJupiteriana{
+  transform: rotate(72deg);
+}
+.esferaSaturnina{
+  transform: rotate(65deg);
+}
+.esferaTerrestre{
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -2.5rem 0 0 -2.5rem;
+  transform: rotate(0deg);
+}
+
+
+/* ################################################### */
+/* PLANETAS */
+/* ################################################### */
+/* Configuração dos planetas */
+/* ################################################### */
+.planetas{
+    border-radius: 100%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+.planetas.terra{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color:blue;
+  margin: 0;
+}
+.planetas.lua{
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    margin: -2rem 0 0 -2rem;
+}
+.planetas.mercurio{
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    margin: -0.5rem 0 0 -0.5rem;
+}
+.planetas.venus{
+    width: 2rem;
+    height: 2rem;
+    background-color:purple;
+    margin: -1rem 0 0 -1rem;
+}
+.planetas.sol{
+    width: 3rem;
+    height: 3rem;
+    margin: -1.5rem 0 0 -1.5rem;
+
+    background-color: yellow;
+    background-image: radial-gradient(#ffffff 65%, #fcfa9d 35% );
+
+    box-shadow: 0 0 2rem 1rem rgba(252,250,157,0.6);
+    z-index: 10;
+}
+.planetas.sol:after{
+  content: "";
+  display: block;
+
+  width: 250%;
+  height: 30%;
+  border-radius: 100%;
+
+  margin: 30% 0 0 -75%;
+
+  background-color: #fcfa9d;
+  opacity: 0.5;
+
+  filter: blur(5px);
+
+  box-shadow: 0 0 2rem 1rem rgba(252,250,157,0.6);
+  z-index: -1;
+}
+
+
+
+.planetas.marte{
+    width: 2rem;
+    height: 2rem;
+    background-color:red;
+    margin: -1rem 0 0 -1rem;
+}
+.planetas.jupiter{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color:white;
+    margin: -1.25rem 0 0 -1.25rem;
+}
+.planetas.saturno{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color:gray;
+    margin: -1.25rem 0 0 -1.25rem;
+}
+
+/* ################################################### */
+/* ZODIACO */
+/* ################################################### */
+/* Aparencia do Zodiaco */
+/* ################################################### */
+.zodiaco{
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -70% 0 0 -70%;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100%;
+  background-color: rgba(255,255,255,0.15);
+
+  transform: rotate(306deg);
+}
+.zodiacoCobertura{
+  width: 85%;
+  height: 85%;
+  margin: 7.5% 0 0 7.5%;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+.divisordeSigno{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.divisordeSigno:after{
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  top: 50%;
+  left: 0;
+  position: absolute;
+}
+
+/* ################################################### */
+/* ZODIACO */
+/* ################################################### */
+/* Sombilos do Zodiaco */
+/* ################################################### */
+.simboloZodiacal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  margin: 0 0 0 0;  
+  transform: rotate(285deg);
+}
+.divisordeSigno .simboloZodiacal:after{
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-bottom:none;
+  top:0;
+  left:50%;
+  margin: 0.65rem 0 0 -1rem;
+  position: relative;  
+}
+
+
+
+
+.signo0{
+  transform: rotate(330deg);
+}
+.signo0 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/0.svg);
+}
+
+.signo1{
+  transform: rotate(300deg);
+}
+.signo1 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/1.svg);
+}
+
+.signo2{
+  transform: rotate(270deg);
+}
+.signo2 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/2.svg);
+}
+
+.signo3{
+  transform: rotate(240deg);
+}
+.signo3 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/3.svg);
+}
+
+.signo4{
+  transform: rotate(210deg);
+}
+.signo4 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/4.svg);
+}
+
+.signo5{
+  transform: rotate(180deg);
+}
+.signo5 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/5.svg);
+}
+
+.signo6{
+  transform: rotate(150deg);
+}
+.signo6 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/6.svg);
+}
+
+.signo7{
+  transform: rotate(120deg);
+}
+.signo7 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/7.svg);
+}
+
+.signo8{
+  transform: rotate(90deg);
+}
+.signo8 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/8.svg);
+}
+
+.signo9{
+  transform: rotate(60deg);
+}
+.signo9 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/9.svg);
+}
+
+.signo10{
+  transform: rotate(30deg);
+}
+.signo10 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/10.svg);
+}
+
+.signo11{
+  transform: rotate(0deg);
+}
+.signo11 .simboloZodiacal:after{
+  background-image: url(images/zodiac-signs/11.svg);
+}
+
+
+/* ################################################### */
+/* ZODIACO */
+/* ################################################### */
+/* Sombilos do Zodiaco */
+/* ################################################### */
+
+.casasMundanas{
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin:-60% 0 0 -60%;
+  overflow: hidden;
+  z-index: 15000;
+}
+
+.casaMundana{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.casaMundana:after{
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: rgba(255,255,255,0.2);
+  background-image: linear-gradient(to right, rgba(255,255,255,0.2) 2%, rgba(255,255,255,0) 35% );
+  top: 50%;
+  left: 0;
+  position: absolute;
+  border-radius: 0;
+}
+.coberturaCasas{ 
+  width: 25%;
+  height: 25%;
+  margin: -12.5% 0 0 -12.5%;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.casaMundana.casa0:after, .casaMundana.casa3:after, .casaMundana.casa6:after, .casaMundana.casa9:after {
+  border-bottom: 3px solid rgba(255,255,255,0.4);
+}
+
+.casa0{
+  transform: rotate(0deg);
+}
+.casa1{
+  transform: rotate(30deg);
+  
+}
+.casa2{
+  transform: rotate(60deg);
+}
+
+.casa3{
+  transform: rotate(90deg);
+}
+.casa4{
+  transform: rotate(120deg);
+}
+.casa5{
+  transform: rotate(150deg);
+}
+
+.casa6{
+  transform: rotate(180deg);
+}
+.casa7{
+  transform: rotate(210deg);
+}
+.casa8{
+  transform: rotate(240deg);
+}
+
+.casa9{
+  transform: rotate(270deg);
+}
+.casa10{
+  transform: rotate(300deg);
+}
+.casa11{
+  transform: rotate(330deg);
+}
+
+/* ################################################### */
+/* ASPECTOS */
+/* ################################################### */
+/* Aspectos */
+/* ################################################### */
+.aspectos{
+  width: 100%;
+  height: 100%;
+  z-index: 11000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -50% 0 0 -50%;
+  
+  border-radius: 100%
+}
+
+
+
+.aspectos{}
+
+.caixaAspectal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sextil{
+  position: absolute;
+  left: 12.5%;
+  top:12.5%;
+  width: 50%;
+  height:50%;
+  
+  transform: rotate(45deg);
+  border-left:1px solid greenyellow;
+}
+
+.quadratura{
+  position: absolute;
+  left: 15%;
+  top:15%;
+  width: 70%;
+  height:70%;  
+  transform: rotate(45deg);
+  border-left:1px solid red;
+}
+.trigono{
+  position: absolute;
+  left: 25%;
+  top: 6.5%;
+  width: 50%;
+  height: 87%;
+  transform: rotate(60deg);
+  border-left: 1px solid green;
+}
+
+.oposicao{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1rem;
+  transform: rotate(195deg);
+}
+.oposicao:after{
+  content: "";
+  display: block;
+  border-bottom: 3px solid rgba(134,8,8,0.8);
+  width: 100%;
+  height: 100%;
+}
+
+
+.caixa1{
+  transform: rotate(336deg);
+}
+.caixa2{
+  transform: rotate(336deg) skewX(-9deg);
+}
+.caixa3{
+  transform: rotate(72deg) skewX(-9deg);
+}
+.caixa4{
+  transform: rotate(210deg);
+}
+.caixa5{
+  transform: rotate(144deg);
+}
+.caixa6{
+  transform: rotate(330deg) skewX(-9deg);
+}
